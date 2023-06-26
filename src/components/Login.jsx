@@ -1,5 +1,5 @@
 import React, { useState }  from 'react'
-import HelmetExport, {Helmet} from "react-helmet"
+import '../styles/logIn.css'
 
 function Login() 
 {
@@ -13,18 +13,31 @@ function Login()
    }
 
   return (
-      <div className='div-1'>
-      <Helmet>
-             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      </Helmet>
-        <form onSubmit={handlesubmit} className='form-1'>
+      <div className='container d-flex center-div justify-content-center align-items-center flex-column'>
+   
+       <form onSubmit={handlesubmit} className='form-1'>
+          
           <h2>Login</h2>
-          <label>email </label>
-          <input type='email'value={email} placeholder='enter your email id/username' onChange={(e)=> setEmail(e.target.value)} required></input>
-  
-          <label>password </label>
-          <input type='password' value={pass} placeholder='entery your password'onChange={(e)=> setPass(e.target.value)} required></input>
-          <button type='sumbit'>Submit</button>
+         
+
+           <div className="form-group">
+            <div className='mb-4'>
+            <label>Email</label>
+              <input type='email'value={email} placeholder='Enter your email id/username' onChange={(e)=> setEmail(e.target.value)} required size={30}></input>
+            </div>
+         
+           <div className='mb-4'>
+            <label>Password</label>
+            <input type='password' value={pass} placeholder='Entery your password'onChange={(e)=> setPass(e.target.value)} required size={30}></input>
+           </div>
+
+           <div class="row mb-4">
+            <div class="col-sm-6 offset-sm-3">
+             <button type="submit" class="btn btn-primary login-button">Login</button>
+            </div>
+           </div>
+
+          </div>
         </form>
       </div>
   )
