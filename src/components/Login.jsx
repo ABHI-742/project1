@@ -22,7 +22,7 @@ function Login()
          </div>
        <form onSubmit={handlesubmit} className='form-1'>
 
-           <div className="form-group">
+           <div className="form-group mt-5">
              <div className='mb-4'>
               <input type='email'value={email} placeholder='Email Id' onChange={(e)=> setEmail(e.target.value)} required size={30}></input>
              </div>
