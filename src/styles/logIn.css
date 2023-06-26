@@ -29,7 +29,7 @@ color: white;
   align-items: center;
   justify-content: center;
   flex:column;
-}*/
+}
 h2
 {
  text-align: center;
@@ -37,8 +37,10 @@ h2
  color: white;
  font-size: 35px;
  padding: 10px;
+ font-family: 'Libre Franklin', sans-serif;
+ font-weight: bold;
 }
-/*label
+label
 {
   text-align: left;
   padding: 5px;
@@ -48,12 +50,12 @@ h2
 }*/
 input
 {
-  font-family: 'Times New Roman';
+  font-size: 1.2rem;
+  font-family: 'Libre Franklin', sans-serif;
   width: 100%;
   border: none;
   border-bottom: 2px solid white;
   outline: none;
-  font-size: 1.0rem;
   color: white;
   padding: 10px;
   margin: 12.5px;
@@ -65,4 +67,5 @@ input
   border-radius: 10px;
   background-color: #007bff;
   width: 100%;
+  font-family: 'Libre Franklin', sans-serif;
 }

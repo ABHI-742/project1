@@ -17,18 +17,18 @@ function Login()
   return (
       <div className='container d-flex center-div justify-content-center align-items-center flex-column'>
    
+         <div  className='text-white fs-1 mt-5'>
+           <Typography variant='h3'>LogIn</Typography>
+         </div>
        <form onSubmit={handlesubmit} className='form-1'>
-          
-          <h2>Login</h2>
-         
 
            <div className="form-group">
              <div className='mb-4'>
-              <input type='email'value={email} placeholder='Enter your email id/username' onChange={(e)=> setEmail(e.target.value)} required size={30}></input>
+              <input type='email'value={email} placeholder='Email Id' onChange={(e)=> setEmail(e.target.value)} required size={30}></input>
              </div>
          
              <div className='mb-4'>
-               <input type='password' value={pass} placeholder='Entery your password'onChange={(e)=> setPass(e.target.value)} required size={30}></input>
+               <input type='password' value={pass} placeholder='Password'onChange={(e)=> setPass(e.target.value)} required size={30}></input>
              </div>
 
               <div class="row mb-4">
