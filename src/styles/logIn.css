@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Eczar&family=Gentium+Plus&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Libre+Baskerville&family=Libre+Franklin&family=Montserrat:ital,wght@0,400;0,900;1,900&family=Proza+Libre&family=Rubik&family=Trirong&family=Ubuntu&family=Work+Sans&display=swap');
+body{
+/* font-family: 'Cormorant Garamond', serif; */
+/* font-family: 'Eczar', serif;
+font-family: 'Gentium Plus', serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Libre Franklin', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Proza Libre', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Trirong', serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Work Sans', sans-serif; */
+/* font-family: 'Proza Libre', sans-serif; */
+font-family: 'Eczar', serif;
+background-color: #19181C;
+color: white;
+}
+/*.div-1 .form-1 
+{
+  display: flex;  
+  flex-direction: column;
+  margin: 150px;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex:column;
+}
+h2
+{
+ text-align: center;
+ margin-top: 40px;
+ color: white;
+ font-size: 35px;
+ padding: 10px;
+ font-family: 'Libre Franklin', sans-serif;
+ font-weight: bold;
+}
+label
+{
+  text-align: left;
+  padding: 5px;
+  color: #c9c9cc;
+  font-family: 'Times New Roman';
+  margin-top: 5px;
+}*/
+input
+{
+  font-size: 1.2rem;
+  font-family: 'Libre Franklin', sans-serif;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid white;
+  outline: none;
+  color: white;
+  padding: 10px;
+  margin: 12.5px;
+  background: transparent;
+}
+.login-button
+{
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff;
+  width: 100%;
+  font-family: 'Libre Franklin', sans-serif;
+}
