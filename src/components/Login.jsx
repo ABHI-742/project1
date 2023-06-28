@@ -2,17 +2,36 @@ import React, { useState }  from 'react'
 import '../styles/logIn.css'
 import { Typography } from '@mui/material';
 import {Link} from 'react-router-dom'
-
+import axios from 'axios';
 function Login() 
 {
-   const [email,setEmail]=useState('')
-   const [pass,setPass]=useState('')
+  const[credentials,setcredentials] = useState({email:"",password:""})
 
-   const handlesubmit=(e)=>{
-   
-       console.log({email})
-       console.log({pass})
+   const handlesubmit=async(e)=>{
+    e.preventDefault();
+    try {
+      
+      const response = await axios.post('http://localhost:5000/api/loginUser', credentials);
+
+      // Assuming the response contains a token
+      const { token } = response.data;
+
+      // Do something with the token (e.g., store it in localStorage)
+
+      
+      setcredentials({ email: '', password: '' });
+
+      // Display a success message or redirect the user
+      alert('Logged in successfully');
+    } catch (err) {
+      console.log('Error logging in:', err);
+      alert('Failed to login');
+    }
+      
    }
+   const handleChange = (event) => {
+    setcredentials({ ...credentials, [event.target.name]: event.target.value });
+  };
 
   return (
       <div className='container d-flex center-div justify-content-center align-items-center flex-column'>
@@ -24,11 +43,11 @@ function Login()
 
            <div className="form-group mt-5">
              <div className='mb-4'>
-              <input type='email'value={email} placeholder='Email Id' onChange={(e)=> setEmail(e.target.value)} required size={30}></input>
+              <input type='email'value={credentials.email} placeholder='Email Id' name="email" onChange={handleChange} required size={30} autoComplete='off' className="form-control custom-input"></input>
              </div>
          
              <div className='mb-4'>
-               <input type='password' value={pass} placeholder='Password'onChange={(e)=> setPass(e.target.value)} required size={30}></input>
+               <input type='password' value={credentials.password} placeholder='Password' name="password" onChange={handleChange} required size={30} autoComplete='off' className="form-control custom-input"></input>
              </div>
 
               <div class="row mb-4">
